@@ -26,7 +26,6 @@
 		493826F32299D30600F59B1E /* Geometry+GEOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493826F22299D30600F59B1E /* Geometry+GEOS.swift */; };
 		493826F52299D31000F59B1E /* GeometryCollection+GEOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493826F42299D31000F59B1E /* GeometryCollection+GEOS.swift */; };
 		493FBE1322A2CC5100B965BD /* GeometryConvertible+GEOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FBE1222A2CC5100B965BD /* GeometryConvertible+GEOS.swift */; };
-		49436EC2226BF51500F8F99E /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49436EC1226BF51500F8F99E /* geos.framework */; };
 		49436EE8226BF9A100F8F99E /* geos.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49436EC1226BF51500F8F99E /* geos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		494F382D2263B30000D6FE47 /* GeometryCollection+CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F382C2263B30000D6FE47 /* GeometryCollection+CodableTests.swift */; };
 		494F382F2263B6CB00D6FE47 /* Feature+CodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494F382E2263B6CB00D6FE47 /* Feature+CodableTests.swift */; };
@@ -316,6 +315,7 @@
 		CD20F1DD1B2830700045D8FD /* GEOSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CD2299841B10B506002C19AE /* GEOSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD22998F1B10B506002C19AE /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2299841B10B506002C19AE /* GEOSwift.framework */; };
 		CD25D73E1B27364E008B3FB3 /* GEOSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = CD25D73D1B27364E008B3FB3 /* GEOSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFB427D22442A3A600DCDB21 /* geos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49436EC1226BF51500F8F99E /* geos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -496,7 +496,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49436EC2226BF51500F8F99E /* geos.framework in Frameworks */,
+				EFB427D22442A3A600DCDB21 /* geos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

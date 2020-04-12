@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.authors = 'Andrea Cremaschi', 'Andrew Hershberger', 'Virgilio Favero Neto'
   s.platforms = { ios: "8.0", osx: "10.9", tvos: "9.0" }
   s.source = {
-    git: 'https://github.com/GEOSwift/GEOSwift.git',
+    git: 'https://github.com/vmalonso/GEOSwift.git',
     tag: s.version
   }
   s.source_files = 'GEOSwift/**/*.{swift,h}'
