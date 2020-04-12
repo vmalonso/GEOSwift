@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     topological operations (intersections, overlapping etc.). A type-safe, MIT-licensed Swift
     interface to the OSGeo's GEOS library routines.
   DESC
-  s.homepage = 'https://github.com/GEOSwift/GEOSwift'
+  s.homepage = 'https://github.com/vmalonso/GEOSwift'
   s.license = {
     type: 'MIT',
     file: 'LICENSE'
