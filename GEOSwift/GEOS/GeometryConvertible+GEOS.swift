@@ -291,17 +291,13 @@ public extension GeometryConvertible {
     // MARK: - Buffer Functions
 
     func buffer(by width: Double) throws -> Geometry {
-        return buffer(by: width, mitre: 0)
-    }
-    
-    func buffer(by width: Double, mitre: Double) throws -> Geometry {
         guard width >= 0 else {
             throw GEOSwiftError.negativeBufferWidth
         }
         let context = try GEOSContext()
         let geosObject = try geometry.geosObject(with: context)
         // returns nil on exception
-        guard let resultPointer = GEOSBuffer_r(context.handle, geosObject.pointer, width, mitre) else {
+        guard let resultPointer = GEOSBuffer_r(context.handle, geosObject.pointer, width, 0) else {
             throw GEOSError.libraryError(errorMessages: context.errors)
         }
         return try Geometry(geosObject: GEOSObject(context: context, pointer: resultPointer))
