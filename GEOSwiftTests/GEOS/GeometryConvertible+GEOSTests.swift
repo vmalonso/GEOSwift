@@ -731,13 +731,4 @@ final class GeometryConvertible_GEOSTests: XCTestCase {
         }
     }
 
-    func testNegativeBufferWidthThrows() {
-        XCTAssertThrowsError(try Point(x: 0, y: 0).buffer(by: -1)) { (error) in
-            if case GEOSwiftError.negativeBufferWidth = error {
-                // pass
-            } else {
-                XCTFail("Threw unexpected error: \(error)")
-            }
-        }
-    }
 }
