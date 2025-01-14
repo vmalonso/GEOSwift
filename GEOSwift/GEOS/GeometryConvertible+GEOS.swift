@@ -309,6 +309,22 @@ public extension GeometryConvertible {
         }
         return try Geometry(geosObject: GEOSObject(context: context, pointer: resultPointer))
     }
+    
+    func bufferWithStyle(width: Double, quadsegs: Int32 = 8, endCapStyle: Int32 = 1, joinStyle: Int32 = 1, mitreLimit: Double = 5.0) throws -> Geometry? {
+            let context = try GEOSContext()
+            let geosObject = try geometry.geosObject(with: context)
+            guard let resultPointer = GEOSBufferWithStyle_r(context.handle, geosObject.pointer, width, quadsegs, endCapStyle, joinStyle, mitreLimit) else {
+                throw GEOSError.libraryError(errorMessages: context.errors)
+            }
+            do {
+                return try Geometry(geosObject: GEOSObject(context: context, pointer: resultPointer))
+            } catch GEOSwiftError.tooFewPoints {
+                return nil
+            } catch {
+                throw error
+            }
+        }
+    
 }
 
 public extension Collection where Element: GeometryConvertible {
